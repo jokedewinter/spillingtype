@@ -1,0 +1,31 @@
+/**
+ * ------------------------------------------------------------- 
+ * Images & media elements
+ * ------------------------------------------------------------- */
+
+img {
+	max-width: 100%; /* Adhere to container width. */
+	height: auto; /* Make sure images are scaled correctly. */
+	display: block;
+}
+
+.image { 
+    max-width: 90em;
+    margin: 0 auto var(--base) auto;
+    padding: 0; 
+}
+
+figcaption { padding: var(--base) 0; }
+
+.svg__icon {
+	width: 32px;
+	height: 32px;
+
+    display: inline-block;
+	vertical-align: middle;
+    fill: var(--col-text);
+    
+    margin-top: -0.3em;
+}
+
+

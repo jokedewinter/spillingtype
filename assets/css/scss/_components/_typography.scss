@@ -1,0 +1,69 @@
+/**
+ * ------------------------------------------------------------- 
+ * Typography
+ * ------------------------------------------------------------- */
+
+* {
+	-webkit-hyphens: none;
+	-moz-hyphens: none !important;
+	hyphens: none;
+}
+
+h2 {
+    @include font-size(21);
+}
+
+h3,
+label {
+    @include font-size(14);
+    font-weight: 500;
+    padding-bottom: 0.5em;
+}
+
+p {
+    font-size: 18px;
+    padding-bottom: 1em;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*
+ * Utility classes
+ * ------------------------------------------------------------- */
+
+.free-fonts header h2 { @include font-size(48); }
+
+.font__get {
+    font-weight: 800;
+    padding: calc(var(--base)/2) 0;
+}
+
+
+.font--narrow p,
+.font--wide p,
+.no-padding { padding-bottom: 0; }
+
+/*
+ * Fonts
+ * ------------------------------------------------------------- */
+
+.apium { font-family: var(--specimen-apium); }
+.tokkel { font-family: var(--specimen-tokkel); }
+.zaha { font-family: var(--specimen-zaha); }
+
+.font--wide a:hover header + p.apium { font-style: italic; }
+.font--wide a:hover header + p.tokkel { font-weight: 900; }
+
+
+.thin { font-weight: 100; }
+.light { font-weight: 300; }
+.regular { font-weight: 400; }
+.medium { font-weight: 500; }
+.bold { font-weight: 700; }
+.black { font-weight: 900; }
+
+.italic { font-style: italic; }
