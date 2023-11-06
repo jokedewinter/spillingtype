@@ -26,6 +26,9 @@ Version: 2.0
 
 @font-face { font-family: 'Apium'; font-style: italic; font-weight: 900; src: local(""), url("../fonts/apium/Apium-BlackItalic.woff2") format("woff2"), url("../fonts/apium/Apium-BlackItalic.woff") format("woff"); }
 
+/*--------------------------------------------------------  Fonts - Gautina -------------------------------------------------------- */
+@font-face { font-family: 'Gautina'; font-style: normal; font-weight: 400; src: local(""), url("../fonts/gautina/gautina-Regular.woff2") format("woff2"), url("../fonts/gautina/gautina-Regular.woff") format("woff"); }
+
 /*--------------------------------------------------------  Fonts - Tokkel -------------------------------------------------------- */
 @font-face { font-family: 'Tokkel'; font-style: normal; font-weight: 100; src: local(""), url("../fonts/tokkel/Tokkel-17-220412-Thin.woff2") format("woff2"), url("../fonts/tokkel/Tokkel-17-220412-Thin.woff") format("woff"); }
 
@@ -46,7 +49,7 @@ Version: 2.0
 @font-face { font-family: 'Zaha'; font-style: normal; font-weight: 700; src: local(""), url("../fonts/zaha/Zaha-Bold.woff2") format("woff2"), url("../fonts/zaha/Zaha-Bold.woff") format("woff"); }
 
 /* --------------------------------------------------------  Custom properties -------------------------------------------------------- */
-:root { --base: 3em; --font: 'Mukta', Helvetica, Arial, sans-serif; --specimen: sans-serif; --specimen-apium: 'Apium', serif; --specimen-tokkel: 'Tokkel', sans-serif; --specimen-zaha: 'Zaha', sans-serif; --col-text: #434A5A; --col-text-light: #b4b4b4; --col-text-reverse: #f7f7f7; --col-page: #fff; --col-page-light: #f3f2ef; --col-page-dark: #333345; --col-border: #C5C7CE; --col-red: rgb(221,96,94); --col-purple: rgb(115,81,112); --col-light: rgb(196,194,207); --col-blue: rgb(146,151,183); --apium-blue: rgb(143, 148, 181); --apium-grey: rgb(196, 194, 207); --apium-purple: rgb(114, 80, 112); --apium-red: rgb(221, 96, 94); --tokkel-blue: rgba(30, 30, 65, .72); --tokkel-red: rgba(230, 30, 30, .72); --tokkel-green: rgba(20, 140, 50, .72); --tokkel-yellow: rgba(235, 190, 15, .72); }
+:root { --base: 3em; --font: 'Mukta', Helvetica, Arial, sans-serif; --specimen: sans-serif; --specimen-apium: 'Apium', serif; --specimen-gautina: 'Gautina', serif; --specimen-tokkel: 'Tokkel', sans-serif; --specimen-zaha: 'Zaha', sans-serif; --col-text: #434A5A; --col-text-light: #b4b4b4; --col-text-reverse: #f7f7f7; --col-page: #fff; --col-page-light: #f3f2ef; --col-page-dark: #333345; --col-border: #C5C7CE; --col-red: rgb(221,96,94); --col-purple: rgb(115,81,112); --col-light: rgb(196,194,207); --col-blue: rgb(146,151,183); --apium-blue: rgb(143, 148, 181); --apium-grey: rgb(196, 194, 207); --apium-purple: rgb(114, 80, 112); --apium-red: rgb(221, 96, 94); --tokkel-blue: rgba(30, 30, 65, .72); --tokkel-red: rgba(230, 30, 30, .72); --tokkel-green: rgba(20, 140, 50, .72); --tokkel-yellow: rgba(235, 190, 15, .72); }
 
 /** ------------------------------------------------------------- Reset CSS Reset for minimalists Source: http://allthingssmitty.com/2017/01/09/css-reset-for-minimalists/ ------------------------------------------------------------------------ */
 *, *:before, *:after { box-sizing: border-box; }
@@ -125,6 +128,8 @@ ul { padding-bottom: 1em; }
 
 /* Fonts ------------------------------------------------------------- */
 .apium { font-family: var(--specimen-apium); }
+
+.gautina { font-family: var(--specimen-gautina); }
 
 .tokkel { font-family: var(--specimen-tokkel); }
 
@@ -356,6 +361,22 @@ how to remove the vertical space around the range input in IE*/
 
 /* Info block ------------------------------------------------------------- */
 @media screen and (min-width: 37.5em) { .info { display: grid; grid-template-columns: 2fr 1fr; grid-gap: var(--base); } .info__details { display: grid; grid-template-columns: repeat(2, 1fr); grid-column-gap: var(--base); } .info__details article:first-of-type { grid-column: 1 / 2; grid-row: 1 / -99; } }
+
+/* Utility classes ------------------------------------------------------------- */
+.blue { fill: var(--apium-blue); }
+
+.grey { fill: var(--apium-grey); }
+
+.purple { fill: var(--apium-purple); }
+
+.red { fill: var(--apium-red); }
+
+/* Try section ------------------------------------------------------------- */
+.try--apium .try__options { grid-template-columns: repeat(5, 1fr); }
+
+.try--apium.reverse::after { content: ""; position: absolute; top: 0; left: 50%; right: 50%; width: 100vw; height: 100%; margin: 0 -50vw; display: block; z-index: 10; background-color: var(--apium-red); }
+
+@media screen and (max-width: 47.99em) { .try--apium .try__options { grid-template-columns: repeat(2, 1fr); grid-row-gap: 1em; } }
 
 /* Utility classes ------------------------------------------------------------- */
 .blue { fill: var(--apium-blue); }

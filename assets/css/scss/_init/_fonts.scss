@@ -92,6 +92,19 @@
        url('../fonts/apium/Apium-BlackItalic.woff') format('woff'); 
 }
 
+/*-------------------------------------------------------- 
+ * Fonts - Gautina
+ * -------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Gautina';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/gautina/gautina-Regular.woff2') format('woff2'), 
+       url('../fonts/gautina/gautina-Regular.woff') format('woff'); 
+}
+
 
 /*-------------------------------------------------------- 
  * Fonts - Tokkel
