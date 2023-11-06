@@ -114,6 +114,8 @@ p { font-size: 18px; padding-bottom: 1em; }
 
 label { display: flex; justify-content: space-between; }
 
+ul { padding-bottom: 1em; }
+
 /* Utility classes ------------------------------------------------------------- */
 .free-fonts header h2 { font-size: 48px; font-size: 4.8rem; }
 
@@ -387,17 +389,17 @@ how to remove the vertical space around the range input in IE*/
 
 @media screen and (max-width: 47.99em) { .try--apium .try__options { grid-template-columns: repeat(2, 1fr); grid-row-gap: 1em; } }
 
-.diacritics .site__main { max-width: 80ch; }
+.guide .site__main { max-width: 80ch; }
 
-.diacritics .site__main > * { padding-top: 0; padding-bottom: calc(var(--base) / 2); }
+.guide .site__main > * { padding-top: 0; padding-bottom: calc(var(--base) / 2); }
 
-.diacritics h3 { font-size: 18px; font-size: 1.8rem; font-weight: bold; }
+.guide h3 { font-size: 18px; font-size: 1.8rem; font-weight: bold; }
 
-.diacritics .page__navigation, .diacritics .page__navigation ol { display: block; }
+.guide .page__navigation, .guide .page__navigation ol { display: block; }
 
-.diacritics .page__navigation ol li { padding-left: 0.5em; padding-bottom: 0.5em; list-style: decimal; }
+.guide .page__navigation ol li { padding-left: 0.5em; padding-bottom: 0.5em; list-style: decimal; }
 
-.diacritics p i { font-weight: normal; }
+.guide p i { font-weight: normal; }
 
 /** ------------------------------------------------------------- Vendor ------------------------------------------------------------- */
 /*

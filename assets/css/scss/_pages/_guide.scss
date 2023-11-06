@@ -1,32 +1,32 @@
 
 
-.diacritics .site__main {
+.guide .site__main {
 	max-width: 80ch;
 }
 
 
-.diacritics .site__main > * { 
+.guide .site__main > * { 
 	padding-top: 0;
 	padding-bottom: calc(var(--base) / 2);
 }
 
-.diacritics h3 {
+.guide h3 {
     @include font-size(18);
 	font-weight: bold;
 }
 
 
-.diacritics .page__navigation,
-.diacritics .page__navigation ol {
+.guide .page__navigation,
+.guide .page__navigation ol {
 	display: block;
 }
 
-.diacritics .page__navigation ol li {
+.guide .page__navigation ol li {
 	padding-left: 0.5em;
 	padding-bottom: 0.5em;
 	list-style: decimal;
 }
 
-.diacritics p i {
+.guide p i {
 	font-weight: normal;
 }
