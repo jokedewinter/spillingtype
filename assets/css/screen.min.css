@@ -5,6 +5,8 @@ Author: Joke De Winter Ltd
 Author URI: https://www.jokedewinter.co.uk
 Version: 2.0
 */
+@font-face { font-family: 'Average'; font-style: normal; font-weight: 400; src: local(""), url("../fonts/Average-240209-018-Regular.woff") format("woff"); }
+
 /*--------------------------------------------------------  Fonts - Apium -------------------------------------------------------- */
 @font-face { font-family: 'Apium'; font-style: normal; font-weight: 300; src: local(""), url("../fonts/apium/Apium-Light.woff2") format("woff2"), url("../fonts/apium/Apium-Light.woff") format("woff"); }
 
@@ -49,7 +51,7 @@ Version: 2.0
 @font-face { font-family: 'Zaha'; font-style: normal; font-weight: 700; src: local(""), url("../fonts/zaha/Zaha-Bold.woff2") format("woff2"), url("../fonts/zaha/Zaha-Bold.woff") format("woff"); }
 
 /* --------------------------------------------------------  Custom properties -------------------------------------------------------- */
-:root { --base: 3em; --font: 'Mukta', Helvetica, Arial, sans-serif; --specimen: sans-serif; --specimen-apium: 'Apium', serif; --specimen-gautina: 'Gautina', serif; --specimen-tokkel: 'Tokkel', sans-serif; --specimen-zaha: 'Zaha', sans-serif; --col-text: #434A5A; --col-text-light: #b4b4b4; --col-text-reverse: #f7f7f7; --col-page: #fff; --col-page-light: #f3f2ef; --col-page-dark: #333345; --col-border: #C5C7CE; --col-red: rgb(221,96,94); --col-purple: rgb(115,81,112); --col-light: rgb(196,194,207); --col-blue: rgb(146,151,183); --apium-blue: rgb(143, 148, 181); --apium-grey: rgb(196, 194, 207); --apium-purple: rgb(114, 80, 112); --apium-red: rgb(221, 96, 94); --tokkel-blue: rgba(30, 30, 65, .72); --tokkel-red: rgba(230, 30, 30, .72); --tokkel-green: rgba(20, 140, 50, .72); --tokkel-yellow: rgba(235, 190, 15, .72); }
+:root { --base: 3em; /*	--font: 'Average', Helvetica, Arial, sans-serif;*/ --font: 'Mukta', Helvetica, Arial, sans-serif; --specimen: sans-serif; --specimen-apium: 'Apium', serif; --specimen-gautina: 'Gautina', serif; --specimen-tokkel: 'Tokkel', sans-serif; --specimen-zaha: 'Zaha', sans-serif; --col-text: #434A5A; --col-text-light: #b4b4b4; --col-text-reverse: #f7f7f7; --col-page: #fff; --col-page-light: #f3f2ef; --col-page-dark: #333345; --col-border: #C5C7CE; --col-red: rgb(221,96,94); --col-purple: rgb(115,81,112); --col-light: rgb(196,194,207); --col-blue: rgb(146,151,183); --apium-blue: rgb(143, 148, 181); --apium-grey: rgb(196, 194, 207); --apium-purple: rgb(114, 80, 112); --apium-red: rgb(221, 96, 94); --tokkel-blue: rgba(30, 30, 65, .72); --tokkel-red: rgba(230, 30, 30, .72); --tokkel-green: rgba(20, 140, 50, .72); --tokkel-yellow: rgba(235, 190, 15, .72); }
 
 /** ------------------------------------------------------------- Reset CSS Reset for minimalists Source: http://allthingssmitty.com/2017/01/09/css-reset-for-minimalists/ ------------------------------------------------------------------------ */
 *, *:before, *:after { box-sizing: border-box; }
