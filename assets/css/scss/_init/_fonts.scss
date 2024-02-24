@@ -3,9 +3,30 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/Average-240209-018-Regular.woff') format('woff'); 
+       url('../fonts/average/Average-240222-035-Regular.woff') format('woff'); 
 }
 
+@font-face {
+  font-family: 'Average';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/average/Average-240222-035-Medium.woff') format('woff'); 
+}
+@font-face {
+  font-family: 'Average';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/average/Average-240222-035-Bold.woff') format('woff'); 
+}
+@font-face {
+  font-family: 'Average';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''),
+       url('../fonts/average/Average-240222-035-Black.woff') format('woff'); 
+}
 /*-------------------------------------------------------- 
  * Fonts - Apium
  * -------------------------------------------------------- */
