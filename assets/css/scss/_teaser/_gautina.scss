@@ -1,0 +1,27 @@
+
+/*
+.bg-hover.gautina:hover { color: var(--col-text-reverse); }
+.bg-hover.gautina:hover::after { background-color: var(--col-orange); }
+.bg-hover.gautina:hover::after { background-image: url(../../fonts/gautina/images/gautina.svg); }
+*/
+
+/* Wider viewport
+ * ------------------------------------------------------------- */
+
+@media screen and ( min-width: 37.5em ) {
+
+	.teaser.gautina a > *:not(figure) { grid-row: 2/3; }
+	.teaser.gautina header { grid-column: 4/5; }
+	.teaser.gautina .teaser__main { grid-column: 5/8; }
+
+	.teaser.gautina .teaser__additional {
+		grid-column: 2/4;
+		align-self: end;
+		margin-bottom: calc(18px + 9px + 1em);
+	}
+
+	.teaser.gautina figure {
+		grid-column: 6/8;
+		grid-row: 1/3;
+	}
+}

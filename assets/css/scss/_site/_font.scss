@@ -1,0 +1,71 @@
+/**
+ * -------------------------------------------------------------
+ * Font 
+ * ------------------------------------------------------------- */
+
+.font__menu {
+	position: -webkit-sticky;
+	position: sticky;
+	//top: 3.125em;
+	top: 2.5em;
+	background-color: var(--col-page);
+	padding-top: 0.5em;
+	padding-bottom: calc(var(--base) / 4);
+	z-index: 100;
+	
+	border-bottom: 1px solid var(--col-border);
+}
+
+.font__menu h1 {
+	font-size: calc(36px + (72 - 36) * ((100vw - 300px) / (1600 - 300))); 
+	line-height: 1;
+}
+
+.font__menu ul {
+	display: flex;
+	align-items: center;
+	margin-top: 1em;	
+	@include no-bullets();	
+}
+
+.font__menu li {
+	margin: 0 1em 0 0;
+}
+
+.font__details {
+	padding: calc(var(--base) / 2) 0;
+}
+
+
+#try:target,
+#specifications:target {
+	padding-top: 9em;
+}
+
+
+/* Narrow viewport
+ * ------------------------------------------------------------- */
+
+@media screen and ( max-width: 37.49em ) {
+
+	.font__menu {
+		padding: 1em 0;
+	}
+}
+
+
+/* Wider viewport
+ * ------------------------------------------------------------- */
+
+@media screen and ( min-width: 37.5em ) {
+	
+	.font__menu {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.font__menu li {
+		margin: 0 0 0 calc(var(--base) / 2);
+	}
+}
+

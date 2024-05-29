@@ -10,41 +10,46 @@ a {
     cursor: pointer;
 }
 
-.bg__dark a:hover { border-bottom: 1px solid var(--col-text-reverse); }
 
+.link {
+	font-weight: bold;
+}
 
-/* Buttons
- * ------------------------------------------------ */
+a:hover,
+.link:hover {
+	color: var(--col-text-hover);
+}
 
 .button {
     position: relative;
 	display: inline-block;
 	margin: calc( var(--base) / 4 ) 0;
-    padding: 0.5em calc( var(--base) / 2 ) 0.5em calc( var(--base) / 1.25 );
+    padding: 0.5em;
 
 	@include font-size(16);
-    font-weight: 500;
+    font-weight: 700;
+	text-transform: uppercase;
     letter-spacing: 1px;
 	background-color: var(--col-text);
 	color: var(--col-text-reverse);
-    @include border-radius(5px);    
+    border-radius: 5px;    
 }
 
 .button:hover {
-    background-color: var(--col-page-dark);
+    background-color: var(--col-orange);
 }
 
-.button::before {
-    content: "";
-    position: absolute;
-    left: 0.7em;
-    
-    display: flex;
-    justify-content: center;
-    width: 1.5em;
-    height: 1.5em;
-    background-repeat: no-repeat;
+.button + .info {
+	margin-top: -1em;
 }
 
-.download::before { background-image: url('../svg/icon-download.svg'); }
-.external::before { background-image: url('../svg/icon-external.svg'); }
+
+/* Wider viewport
+ * ------------------------------------------------------------- */
+
+@media screen and ( min-width: 37.50em ) {
+	
+	.button {
+		padding: 0.3em 2em 0.5em 2em;
+	}
+}

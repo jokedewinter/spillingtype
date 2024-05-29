@@ -1,0 +1,54 @@
+
+@font-face {
+	font-family: 'VerrücktDisplay'; font-style: normal; font-weight: 100;
+	src: local(''), url('../fonts/VerrucktDisplay-Light.woff') format('woff');
+}
+@font-face {
+	font-family: 'VerrücktDisplay'; font-style: normal; font-weight: 400;
+	src: local(''), url('../fonts/VerrucktDisplay-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'VerrücktDisplay'; font-style: normal; font-weight: 500;
+	src: local(''), url('../fonts/VerrucktDisplay-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'VerrücktDisplay'; font-style: normal; font-weight: 700;
+	src: local(''), url('../fonts/VerrucktDisplay-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'VerrücktDisplay'; font-style: normal; font-weight: 900;
+	src: local(''), url('../fonts/VerrucktDisplay-Black.woff') format('woff');
+}
+@font-face {
+	font-family: 'VerrücktText'; font-style: normal; font-weight: 100;
+	src: local(''), url('../fonts/VerrucktText-Light.woff') format('woff');
+}
+@font-face {
+	font-family: 'VerrücktText'; font-style: normal; font-weight: 400;
+	src: local(''), url('../fonts/VerrucktText-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'VerrücktText'; font-style: normal; font-weight: 500;
+	src: local(''), url('../fonts/VerrucktText-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'VerrücktText'; font-style: normal; font-weight: 700;
+	src: local(''), url('../fonts/VerrucktText-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'VerrücktText'; font-style: normal; font-weight: 900;
+	src: local(''), url('../fonts/VerrucktText-Black.woff') format('woff');
+}
+
+
+:root {
+	--verruckt-display: 'VerrücktDisplay', sans-serif;
+	--verruckt-text: 'VerrücktText', sans-serif;
+}
+
+.verruckt-display { font-family: var(--verruckt-display); }
+.verruckt-text { font-family: var(--verruckt-text); }
+
+.font__menu h1 {
+	font-weight: 900;
+}

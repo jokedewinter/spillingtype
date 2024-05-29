@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	
+    <title>Adding italics in Glyphs | Spilling Type</title>
+    <meta name="description" content="A step by step guide to help you with adding italics to your Glyphs file.">
+    
+	<link rel="stylesheet" href="../assets/css/screen.min.css">
+	<link rel="canonical" href="https://spillingtype.com/blog/adding-italics-in-glyphs.html">
+	
+</head>
+
+
+<body class="page">
+
+<header class="site__masthead bg">
+	<h1>
+		<a href="../index.html" rel="home" title="Return to home page">Spilling Type</a>
+	</h1>
+	
+	<nav role="navigation" aria-label="Site navigation">
+		<ul>
+			<li><a href="../index.html">Typefaces</a></li>
+			<li><a href="#about">About</a></li>
+			<li class="current"><a href="../blog.html">Blog</a></li>
+		</ul>
+	</nav>
+</header>
+
+
+<main class="site__main">
+
+    <article class="post">
+		<header>
+			<h1>A (rough) guide to add italics in Glyphs</h1>
+			
+			<nav class="post__navigation" role="navigation" aria-label="On page navigation">
+				<ul>
+					<li><a href="#one">01/ Setting up your file</a></li>
+					<li><a href="#two">02/ Setting up your masters</a></li>
+					<li><a href="#three">03/ Setting up your exports</a></li>
+					<li><a href="#four">04/ Creating your italic glyphs</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<div>
+			<p>There are two things to consider:</p>
+			<ul>
+				<li>How you set it up</li>
+				<li>How you go about creating your glyphs</li>
+			</ul>
+			<p>In some ways it's easier to have your roman and italic masters in the same file. I know professional type designers say don't do it, but I say, in the beginning (of a project) there is no harm in doing so and it can help you with aligning things better. Once your glyph set and masters count increases it's a good idea to consider splitting things up for you sanity, but in the beginning there is no harm to keep everything under one roof for a bit.</p>
+		</div>
+    
+	    <section id="one" class="">
+			<h2>01/ Setting up your file</h2>
+			<p>In order to add italics to your typeface you need to add an <i>Italic Axis</i> to the <b>Font Info > Font</b> tab of your font file.</p>
+			<p>In the <b>Axis</b> section click the <i>plus</i> button. Then for the new entry choose <i>Italic</i> from the dropdown.</p>
+	    </section>
+	
+	    <section id="two" class="">
+			<h2>02/ Setting up your masters</h2>
+			<p>In <b>Font Info > Masters</b> create masters for your Roman and Italic fonts.</p>
+			<p>The <i>weight axis</i> for your roman/italic masters need to be set to the same value (I am using standard values).</p>
+			<ul>
+				<li>Master name: Light Roman - Weight Axes: 300</li>
+				<li>Master name: Light Italic - Weight Axes: 300</li>
+				<li>Master name: Bold Roman - Weight Axes: 700</li>
+				<li>Master name: Bold Italic - Weight Axes: 700</li>
+			</ul>
+			<p>Then add the <i>italic axis</i>. Set this to 0 for Romans and 1 for Italics.</p>
+			<p>Using any other value then 0 or 1 is confusing because either a master is italic or it isn't. I imagine a use case with different italic values would be if you have several italic masters for the same weight with different italic slants. Say one is 5 degrees, another 11 and a crazy one at 35. But usually you only have one, so use 1.</p>
+	    </section>
+
+	    <section id="three" class="">
+			<h2>03/ Setting up your exports</h2>
+			<p>In <b>Font Info > Exports</b> create the fonts you want to export.</p>
+			<p>Wether you are using different files for your roman and italics or not, it's the same in all cases. The values for the weight and italic axis of your exports need to be the same for Roman as they do for Italic.</p>
+			<ul>
+				<li>Style name: Light Roman - Weight Axes: 300 - Italic: 0</li>
+				<li>Style name: Light Italic - Weight Axes: 300 - Italic: 1</li>
+				<li>Style name: Regular Roman - Weight Axes: 400 - Italic: 0</li>
+				<li>Style name: Regular Italic - Weight Axes: 400 - Italic: 1</li>
+				<li>Style name: Bold Roman - Weight Axes: 700 - Italic: 0</li>
+				<li>Style name: Bold Italic - Weight Axes: 700 - Italic: 1</li>
+			</ul>
+			<p>If you have different weight/italic values for the exports of the same style then it will generate different exports. For example:</p>
+			<ul>
+				<li>Style name: Regular Roman - Weight Axes: 375 - Italic: 0</li>
+				<li>Style name: Regular Italic - Weight Axes: 400 - Italic: 1</li>
+			</ul>
+			<p>Here it will create a Regular Roman that has a 375 weight and Regular Italic with a 400 weight. Depending on the weights of your extremes this might give different results.</p>
+			<p>If your Roman and Italic masters are in the same file it's easier to keep track of this stuff. And personally, I think that if you have only a handful of masters and a manageable character set, it's not that much of a hassle to maintain. But everyone is different in that.</p>
+	    </section>
+    
+	    <section id="four" class="">
+			<h2>04/ Creating your italic glyphs</h2>
+			<p>I always start from the Roman master and duplicate it, then add 1 to the Italic axis value, and set the italic degree value. That way your entire italic master is populated with roman glyphs, with the glyph box slanted to the right degree, and you can adjust the lot your heart's content.</p>
+			<p>Of course there is no harm in creating a brand new master and then draw everything from scratch. It all depends on how you work and how complex your italic font will be. If it is going to be very different from the Roman then starting from a blank slate makes complete sense.</p>
+			<h3>Using transformations</h3>
+			<p>You can slant the lot in bulk or one by one. If you slant in bulk select everything in the <i>Font view</i>, and then unselect anything that has components in it. If you transform those in bulk, they will get transformed twice. Then use <b>Path > Transformations</b>. In the Transformations window set it like this:</p>
+			<ul>
+				<li>Translate X: 0</li>
+				<li>Translate Y: 0</li>
+				<li>Origin: 1/2 x height</li>
+				<li>Scale horizontal: 85% (this makes your italic glyphs narrower - adjust this to your taste)</li>
+				<li>Scale vertical: 100%</li>
+				<li>Slant: whatever your italic degree is.</li>
+			</ul>
+			<p>Once transformed you will need to go into every glyph and fix extremes and any other fine-tuning required. You should end up with something that relates in weight to your roman master.</p>
+			<p>You can also do this one glyph at a time. Up to you. And you may also chose to use a combination of rotation and slanting instead of Transformations. Also up to you. This is a rough guide, adapt it to your needs.</p>
+	    </section>
+	
+	</article>
+	
+</main>
+
+
+
+<footer class="site__footer">
+	
+    <article id="about">
+        <h3>About Spilling Type</h3>
+        <p>Spilling Type is a small independent type foundry run by Joke De Winter,  a graduate from the 2023 Type West programme. The foundry creates typefaces for web and print.</p>
+    </article>
+	
+	<nav class="footer__typefaces">
+		<h3>Typefaces</h3>
+		<ul>
+			<li><a href="../typefaces/apium/index.html">Apium</a></li>
+			<li><a href="../typefaces/gautina/index.html">Gautina</a></li>
+			<li><a href="../typefaces/verruckt/index.html">Verrückt</a></li>
+			<li><a href="../typefaces/bloody-pandora/index.html">Bloody Pandora</a></li>
+		</ul>
+	</nav>
+        
+    <p>&copy; 2022-2024 Spilling Type. All Rights Reserved.</p>
+	
+	<nav class="footer__legal">
+		<ul>
+			<li><a class="email" onclick="mail()">Get in touch</a></li>
+			<li><a href="../privacy-policy.html">Privacy Policy</a></li>
+		</ul>
+	</nav>
+		
+	<nav class="footer__social">
+		<ul>
+			<li>
+				<a href="https://www.instagram.com/spillingtype/" rel="external">
+					<span class="screen-reader-text">Instagram</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g fill="#4A4A4A"><path d="M15.925 11.4c-2.557 0-4.675 2.082-4.675 4.675a4.66 4.66 0 0 0 4.675 4.675c2.593 0 4.675-2.118 4.675-4.675S18.482 11.4 15.925 11.4Zm0 7.67a3.008 3.008 0 0 1-2.995-2.995 3.008 3.008 0 0 1 2.995-2.995 3.008 3.008 0 0 1 2.995 2.995 3.008 3.008 0 0 1-2.995 2.995Z"/><circle cx="20.6" cy="11.4" r="1"/><path d="M23.41 9.405C22.475 8.48 21.143 8 19.632 8h-7.414C9.088 8 7 9.988 7 12.97v7.026c0 1.474.504 2.742 1.511 3.667.972.891 2.268 1.337 3.743 1.337h7.342c1.547 0 2.843-.48 3.778-1.337.972-.89 1.476-2.159 1.476-3.633v-7.06c0-1.44-.504-2.674-1.44-3.565Zm-.143 10.625c0 1.063-.396 1.92-1.044 2.502-.648.583-1.548.891-2.627.891h-7.342c-1.08 0-1.98-.308-2.627-.89-.648-.618-.972-1.475-.972-2.537V12.97c0-1.028.324-1.885.972-2.502.612-.583 1.548-.891 2.627-.891h7.414c1.08 0 1.98.308 2.627.925.612.617.972 1.474.972 2.468v7.06Z"/></g></svg>
+				</a>
+			<li>
+				<a href="https://typo.social/@jokedewinter" rel="external">
+					<span class="screen-reader-text">Mastodon</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g fill="none" fill-rule="nonzero"><path fill="#4A4A4A" d="M15.943 5c-2.746.011-5.472.36-6.89 1.014 0 0-3.053 1.39-3.053 6.122 0 5.634-.004 12.709 5.057 14.077 1.938.52 3.605.633 4.945.556 2.432-.138 3.634-.883 3.634-.883l-.081-1.797s-1.577.556-3.528.492c-1.934-.068-3.971-.213-4.288-2.628a5.128 5.128 0 0 1-.043-.678c4.097 1.017 7.591.443 8.553.327 2.685-.327 5.023-2.01 5.321-3.55.467-2.425.428-5.916.428-5.916 0-4.732-3.047-6.122-3.047-6.122C21.455 5.315 18.69 4.99 15.943 5Z"/><path fill="#FFF" d="M13.005 8.61c.94.025 1.87.446 2.443 1.335l.554.941.552-.94c1.15-1.789 3.727-1.677 4.954-.294 1.13 1.317.879 2.166.879 8.047v.002h-2.225v-5.117c0-2.396-3.054-2.488-3.054.332v2.965h-2.21v-2.965c0-2.82-3.053-2.73-3.053-.334v5.117h-2.23c0-5.885-.247-6.74.879-8.047.618-.696 1.57-1.067 2.51-1.042Z"/></g></svg>
+				</a>
+			<li>
+		</ul>
+	</nav>
+
+
+
+
+
+
+	<p class="jokedewinter"><a href="https://www.jokedewinter.co.uk" rel="me">Made by Joke De Winter</a></p>
+	
+</footer>
+
+
+<script>
+adress = 'mailt' + 'o:hel' + 'lo@spilling' + 'type.com';
+document.getElementsByClassName('email')[0].title = adress;
+function mail(){window.location.href = adress;}
+</script>
+
+</body>
+</html>
+
+
+
+

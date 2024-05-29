@@ -1,0 +1,21 @@
+
+.bg-hover.abstract-shapes:hover { color: var(--col-text-reverse); }
+.bg-hover.abstract-shapes:hover::after { background-color: var(--col-teal); }
+
+.teaser.abstract-shapes { padding-top: var(--base); }
+
+/* Wider viewport
+ * ------------------------------------------------------------- */
+
+@media screen and ( min-width: 37.5em ) {
+
+	.teaser.abstract-shapes a > *:not(figure) { grid-row: 1/-1; }
+	.teaser.abstract-shapes header { grid-column: 3/5; }
+	.teaser.abstract-shapes .teaser__main { grid-column: 5/8; }
+
+	.teaser.abstract-shapes figure {
+		grid-column: 1/3;
+		grid-row: 1/-1;
+	}
+}
+

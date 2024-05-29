@@ -1,0 +1,79 @@
+/**
+ * -------------------------------------------------------------
+ * Specimen
+ * ------------------------------------------------------------- */
+
+.module__specimen {
+	margin-bottom: var(--base);
+}
+
+.text--wide .feature {
+	text-align: center;
+}
+
+
+/* Wider viewport
+ * ------------------------------------------------------------- */
+
+@media screen and ( min-width: 37.50em ) {
+	
+	.module__specimen {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: calc(var(--base) / 2);
+	}
+	
+	.text--wide {
+		grid-column: span 3;
+	}
+	
+	.text--narrow {
+		grid-column: span 1;
+		max-width: 32ch;
+		margin: 0 auto;
+	}
+}
+
+
+/*
+ * Specimen classes
+ *
+ * Fluid typography.
+ * The font size will be generated magically depending on the viewport width.
+
+font-size: calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width])));
+
+ * ------------------------------------------------------------- */
+
+.light { font-weight: 300; }
+.regular { font-weight: 400; }
+.medium { font-weight: 500; }
+.bold { font-weight: 700; }
+.black { font-weight: 900; }
+
+.italic { font-style: italic; }
+.center { text-align: center; }
+
+.size-72 { 
+	font-size: calc(36px + (72 - 36) * ((100vw - 300px) / (1600 - 300))); 
+	line-height: 1.2; 
+	max-width: 27ch; 
+	margin: 0 auto; 
+}
+
+.size-36 { 
+	font-size: calc(21px + (36 - 21) * ((100vw - 300px) / (1600 - 300))); 
+	line-height: 1.2; 
+	max-width: 36ch; 
+	margin: 0 auto; 
+}
+
+.size-21 { @include font-size(21); }
+.size-18 { @include font-size(18); }
+
+
+
+
+
+
+

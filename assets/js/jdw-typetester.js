@@ -6,6 +6,28 @@ Author URI: https://www.jokedewinter.co.uk
 Version: 1.0
 */
 
+/* -------------------------------------------------------------
+ * Adjust starting font size depending on viewport width
+ * Does not update if you change viewport width manually
+ * ------------------------------------------------------------- */
+
+var fontSize = document.getElementsByClassName("sizeValue");
+var viewport_width = window.innerWidth;
+
+if ( viewport_width <= 720 ) {
+	for ( let i = 0; i < fontSize.length; i++ ) {
+        fontSize[i].innerHTML = "36 px"; 
+    }
+} else if ( viewport_width <= 1200) {
+	for ( let i = 0; i < fontSize.length; i++ ) {
+        fontSize[i].innerHTML = "72 px"; 
+    }
+} else {
+	for ( let i = 0; i < fontSize.length; i++ ) {
+        fontSize[i].innerHTML = "125 px"; 
+    }
+}
+
 
 
 /* -------------------------------------------------------------
@@ -17,8 +39,8 @@ for ( let i = 0; i < selectWeight.length; i++ ) {
     selectWeight[i].addEventListener("change", function() {
         
         var chosenWeight = selectWeight[i].value.split(', ');
-        document.getElementsByClassName("tryString")[i].style.fontWeight = chosenWeight[0];
-        document.getElementsByClassName("tryString")[i].style.fontStyle = chosenWeight[1];
+        document.getElementsByClassName("string")[i].style.fontWeight = chosenWeight[0];
+        document.getElementsByClassName("string")[i].style.fontStyle = chosenWeight[1];
         
     }, false);
 }
@@ -33,29 +55,11 @@ for ( let i = 0; i < selectSize.length; i++ ) {
     selectSize[i].addEventListener("input", function() { 
         
         var chosenSize = selectSize[i].value;
-        document.getElementsByClassName("tryString")[i].style.fontSize = chosenSize + "px";
+        document.getElementsByClassName("string")[i].style.fontSize = chosenSize + "px";
         document.getElementsByClassName("sizeValue")[i].innerHTML = chosenSize + " px";
         
     }, false);
 }
-
-
-/* -------------------------------------------------------------
- * Choose leading
- * ------------------------------------------------------------- */
-var selectLeading = document.getElementsByClassName("selectLeading");
-
-for ( let i = 0; i < selectLeading.length; i++ ) {
-    selectLeading[i].addEventListener("input", function() { 
-        
-        var chosenLeading = selectLeading[i].value;
-        var newLeading = chosenLeading / 10;
-        document.getElementsByClassName("tryString")[i].style.lineHeight = newLeading;
-        document.getElementsByClassName("leadingValue")[i].innerHTML = newLeading;
-        
-    }, false);
-}
-
 
 /* -------------------------------------------------------------
  * Choose alignment
@@ -67,7 +71,6 @@ for ( let i = 0; i < selectAlignment.length; i++ ) {
     var chosenAlignment = selectAlignment[i].getElementsByTagName("button");
     
     for ( let j = 0; j < chosenAlignment.length; j++ ) {
-        
         
         chosenAlignment[j].onclick = function() {    
 
@@ -82,73 +85,11 @@ for ( let i = 0; i < selectAlignment.length; i++ ) {
             }
             
             this.classList.toggle("active");
-            document.getElementsByClassName("tryString")[i].style.textAlign = this.name;
+            document.getElementsByClassName("string")[i].style.textAlign = this.name;
         }
     } 
 } 
 
-
-/* -------------------------------------------------------------
- * Choose theme
- * ------------------------------------------------------------- */
-var selectFont = document.getElementsByClassName("try");
-
-for ( let i = 0; i < selectFont.length; i++ ) {
-
-    var reverseTheme = selectFont[i].getElementsByClassName("reverseTheme");
-    for ( let j = 0; j < reverseTheme.length; j++ ) {
-    
-        reverseTheme[j].onclick = function() { 
-           selectFont[i].classList.toggle("reverse");
-        }
-
-    }
-}
-
-
-/* -------------------------------------------------------------
- * Reset choices
- * ------------------------------------------------------------- */
-var resetTry = document.getElementsByClassName("resetTry");
-
-for ( let i = 0; i < resetTry.length; i++ ) {
-    resetTry[i].onclick = function() { 
-
-        var weight = 400;
-        var style = "normal";
-        var size = 32;
-        var leading = 1.2;
-        var alignment = "left";
-        
-        if ( window.screen.width > 768 ) { var size = 48; }
-            
-
-        // Reset specimen string values
-        document.getElementsByClassName("tryString")[i].style.fontWeight = weight;
-        document.getElementsByClassName("tryString")[i].style.fontStyle = style;
-        document.getElementsByClassName("tryString")[i].style.fontSize = size + "px";
-        document.getElementsByClassName("tryString")[i].style.lineHeight = leading;
-        document.getElementsByClassName("tryString")[i].style.textAlign = alignment;
-
-        // Reset option values
-        document.getElementsByClassName("sizeValue")[i].innerHTML = size + " px";
-        document.getElementsByClassName("leadingValue")[i].innerHTML = leading;
-
-        // Reset active alignment button
-        var buttons = document.getElementsByClassName("selectAlignment")[i].getElementsByTagName("button");
-        for ( let j = 0; j < buttons.length; j++ ) {
-            if ( buttons[j].classList.contains("active") ) {
-                buttons[j].classList.toggle("active");
-            }
-            buttons[0].classList.toggle("active"); 
-        } 
-
-        // Reset background colour
-        var selectFont = document.getElementsByClassName("try")[i];
-        selectFont.classList.remove("reverse");
-        
-    }
-}
 
 
 

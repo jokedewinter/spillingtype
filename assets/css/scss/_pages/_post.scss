@@ -1,0 +1,34 @@
+/**
+ * -------------------------------------------------------------
+ * Post
+ * ------------------------------------------------------------- */
+
+.post > * { 
+	padding-top: 0;
+	padding-bottom: calc(var(--base) / 2);
+}
+
+
+.post__navigation {
+	margin-top: calc(var(--base) / 2);
+	padding: calc(var(--base) / 4) 0;
+	border-top: 1px solid var(--col-border);
+	border-bottom: 1px solid var(--col-border);
+}
+
+.post__navigation ul {
+	@include no-bullets();
+}
+
+.post__navigation ul li {
+	padding-left: 1em;
+	padding-bottom: .5em;
+}
+
+.post__navigation ul li a { border-bottom: 1px solid var(--col-text); }
+.post__navigation ul li a:hover { font-weight: 700; }
+
+
+.post p i {
+	font-weight: normal;
+}

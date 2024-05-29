@@ -1,14 +1,14 @@
 /*
-CSS Styles for Spilling Type site
+CSS Styles for Spilling Type
 
-Author: Joke De Winter Ltd
+Author: Joke De Winter
 Author URI: https://www.jokedewinter.co.uk
-Version: 2.0
+Version: 2.0 
 */
 
 @import "_init/_mixins";
 @import "_init/_fonts";
-@import "_init/_variables";
+@import "_init/_root";
 @import "_init/_reset";
 
 
@@ -18,6 +18,7 @@ Version: 2.0
  * ------------------------------------------------------------- */
 
 @import "_base/_site";
+@import "_base/_background";
 
 
 
@@ -25,6 +26,7 @@ Version: 2.0
  * -------------------------------------------------------------
  * Components
  * ------------------------------------------------------------- */
+
 @import "_components/_typography";
 @import "_components/_links";
 @import "_components/_images";
@@ -33,29 +35,60 @@ Version: 2.0
 
 /**
  * -------------------------------------------------------------
+ * Site
+ * ------------------------------------------------------------- */
+
+@import "_site/_masthead";
+@import "_site/_footer";
+@import "_site/_font";
+
+
+/**
+ * -------------------------------------------------------------
  * Layout
  * ------------------------------------------------------------- */
-@import "_layout/_header";
-@import "_layout/_footer";
-@import "_layout/_try";
 
+
+
+/**
+ * -------------------------------------------------------------
+ * Modules
+ * ------------------------------------------------------------- */
+
+@import "_module/_about";
+@import "_module/_features";
+@import "_module/_gallery";
+@import "_module/_hero";
+@import "_module/_specifications";
+@import "_module/_specimen";
+@import "_module/_styles";
+@import "_module/_try";
+
+/**
+ * -------------------------------------------------------------
+ * Teaser
+ * ------------------------------------------------------------- */
+
+@import "_teaser/_teaser";
+@import "_teaser/_apium";
+@import "_teaser/_gautina";
+@import "_teaser/_verruckt";
+@import "_teaser/_bloody-pandora";
+@import "_teaser/_abstract-shapes";
 
 /**
  * -------------------------------------------------------------
  * Pages
  * ------------------------------------------------------------- */
-@import "_pages/_home";
-@import "_pages/_specimen";
-@import "_pages/_apium";
-@import "_pages/_gautina";
-@import "_pages/_tokkel";
-@import "_pages/_guide";
+
+@import "_pages/_page";
+@import "_pages/_fonts";
+@import "_pages/_post";
+
 
 
 /**
  * -------------------------------------------------------------
  * Vendor
  * ------------------------------------------------------------- */
-@import "_vendor/_tiny-slider";
-
 

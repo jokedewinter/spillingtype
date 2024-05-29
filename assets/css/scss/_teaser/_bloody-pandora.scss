@@ -1,0 +1,23 @@
+
+/*
+.bg-hover.bloody-pandora:hover { color: var(--col-text-reverse); }
+.bg-hover.bloody-pandora:hover::after { background-color: var(--col-green); }
+.bg-hover.bloody-pandora:hover::after { background-image: url(../../fonts/bloody-pandora/images/bloodypandora.svg); }
+*/
+
+
+/* Wider viewport
+ * ------------------------------------------------------------- */
+
+@media screen and ( min-width: 37.5em ) {
+
+	.teaser.bloody-pandora a > *:not(figure) { grid-row: 2/3; }
+	.teaser.bloody-pandora header { grid-column: 3/4; }
+	.teaser.bloody-pandora .teaser__main { grid-column: 4/6; }
+	.teaser.bloody-pandora .teaser__additional { grid-column: 1/3; }
+
+	.teaser.bloody-pandora figure {
+		grid-column: 6/8;
+		grid-row: 1/3;
+	}
+}

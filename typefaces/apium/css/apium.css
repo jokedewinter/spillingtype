@@ -1,0 +1,66 @@
+/**
+ * -------------------------------------------------------------
+ * Loading fonts and styles for the typeface page
+ * ------------------------------------------------------------- */
+
+@font-face {
+	font-family: 'Apium'; font-style: normal; font-weight: 300;
+	src: local(''), url('../fonts/Apium-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Apium'; font-style: normal; font-weight: 400;
+	src: local(''), url('../fonts/Apium-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Apium'; font-style: normal; font-weight: 500;
+	src: local(''), url('../fonts/Apium-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Apium'; font-style: normal; font-weight: 700;
+	src: local(''), url('../fonts/Apium-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Apium'; font-style: normal; font-weight: 900;
+	src: local(''), url('../fonts/Apium-Black.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Apium'; font-style: italic; font-weight: 300;
+	src: local(''), url('../fonts/Apium-LightItalic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Apium'; font-style: italic; font-weight: 400;
+	src: local(''), url('../fonts/Apium-RegularItalic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Apium'; font-style: italic; font-weight: 500;
+	src: local(''), url('../fonts/Apium-MediumItalic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Apium'; font-style: italic; font-weight: 700;
+	src: local(''), url('../fonts/Apium-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Apium'; font-style: italic; font-weight: 900;
+	src: local(''), url('../fonts/Apium-BlackItalic.woff') format('woff');
+}
+
+:root {
+	--apium: 'Apium', serif;
+}
+
+.apium { font-family: var(--apium); }
+.string.apium-italic { font-family: var(--apium); font-style: italic; }
+
+
+.font__menu h1 {
+	font-weight: 900;
+}
