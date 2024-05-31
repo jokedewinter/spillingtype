@@ -1,0 +1,31 @@
+/**
+ * -------------------------------------------------------------
+ * Glyphs
+ * ------------------------------------------------------------- */
+
+.module__glyphs {
+    display: grid;
+    grid-template-columns: 500px 2fr;
+    padding: var(--base) 0;
+}
+
+
+.glyphs a {
+    border: 1px solid var(--col-border);
+    padding: 0 0.3175em;
+    margin: 0.13755em 0;
+    line-height: 2.1;
+    width: 2em;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.glyph_box {
+	padding: var(--base);
+}
+
+
+#glyph {
+	@include font-size(360);
+}

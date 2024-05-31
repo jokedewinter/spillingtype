@@ -1,6 +1,7 @@
 Checklist
 --------------------------
 
+
 ---------------
 * Content
 
@@ -14,6 +15,14 @@ Checklist
 
 - Add variable font try thing
 
+
+Glyph Tester
+
+- can you create outlined svg's from all glyphs in a font?
+- can the file names for these glyphs live in a json file?
+- then read the json file and generate the code for the glyph tester on the fly
+- how do you hide font files in a browser?
+
 ---------------
 * CSS
 
@@ -21,9 +30,7 @@ Checklist
 ---------------
 * SVG
 
-- Fix SVG's to show the opentype features: outline text
 - Create double lines for each feature if there are two distinctive styles in a typeface (eg. display/text, roman/italic)
-- Re-optimise changed files
 
 ---------------
 * Glyphs
@@ -37,3 +44,5 @@ Checklist
 --- D O N E -------------------------------
 - 240424 - Add horizontal scrollbar to the gallery images on the fonts pages (use Companion Plants CSS)
 - 240424 - Look into font-sizing with CSS so that it scales when the viewport changes
+- 240528 - Fix SVG's to show the opentype features: outline text
+- 240528 - Re-optimise changed files

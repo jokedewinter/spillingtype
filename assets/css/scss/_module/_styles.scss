@@ -3,15 +3,8 @@
  * Styles
  * ------------------------------------------------------------- */
 
-.module__styles {
-	margin-bottom: var(--base);
-}
-
-
-.module__styles figure {
-	margin-bottom: calc(var(--base) / 4);
-	
-}
+.module__styles { margin-bottom: var(--base); }
+.module__styles figure { margin-bottom: calc(var(--base) / 4); }
 
 /*
 .module__styles figcaption {
