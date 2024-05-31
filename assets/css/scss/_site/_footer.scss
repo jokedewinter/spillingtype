@@ -7,12 +7,6 @@
 	margin-top: calc(var(--base) * 2);
 }
 
-.site__footer h3 {
-	@include font-size(18);
-	text-transform: none;
-	letter-spacing: 0px;
-}
-
 .site__footer article,
 .site__footer .footer__typefaces {
 	margin-bottom: calc(var(--base) / 2);
