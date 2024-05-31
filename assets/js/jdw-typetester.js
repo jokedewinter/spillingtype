@@ -1,7 +1,7 @@
 /*
 JavaScript for Type Tester
 
-Author: Joke De Winter Ltd
+Author: Joke De Winter
 Author URI: https://www.jokedewinter.co.uk
 Version: 1.0
 */
