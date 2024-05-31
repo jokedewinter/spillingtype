@@ -1,0 +1,44 @@
+/* -------------------------------------------------------- 
+ * Custom properties
+ * -------------------------------------------------------- */
+
+:root {
+
+    --base: 3em;
+
+/*	--font: 'Average', Helvetica, Arial, sans-serif;*/
+	--font: 'Mukta', Helvetica, Arial, sans-serif;
+	--specimen: sans-serif;
+	--specimen-apium: 'Apium', serif;
+	--specimen-gautina: 'Gautina', serif;
+	--specimen-tokkel: 'Tokkel', sans-serif;
+	--specimen-zaha: 'Zaha', sans-serif;
+
+    --col-text: #434A5A;			// dark blue
+	--col-text-light: #b4b4b4; //8C8E9D;	// very light grey
+	--col-text-reverse: #f7f7f7;
+    
+	--col-page: #fff;
+    --col-page-light: #f3f2ef;  // off white, with a blue tinge
+    --col-page-dark: #333345; //232e38;  // dark grey
+    --col-border: #C5C7CE;
+
+    
+	--col-red: rgb(221,96,94);
+	--col-purple: rgb(115,81,112);
+    --col-light: rgb(196,194,207);
+    --col-blue: rgb(146,151,183);
+    
+    
+    --apium-blue: rgb(143, 148, 181);
+    --apium-grey: rgb(196, 194, 207);
+    --apium-purple: rgb(114, 80, 112);
+    --apium-red: rgb(221, 96, 94);
+    
+    --tokkel-blue: rgba(30, 30, 65, .72);
+    --tokkel-red: rgba(230, 30, 30, .72);
+    --tokkel-green: rgba(20, 140, 50, .72);
+    --tokkel-yellow: rgba(235, 190, 15, .72);
+}
+
+

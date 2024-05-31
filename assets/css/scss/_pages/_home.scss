@@ -1,0 +1,101 @@
+/**
+ * ------------------------------------------------------------- 
+ * Home
+ * ------------------------------------------------------------- */
+
+.font a {
+    display: block;
+}
+
+.font a > * {
+    position: relative;
+    z-index: 100;
+}
+
+
+/* Commercial fonts
+ * ------------------------------------------------------------- */
+
+.font--wide a {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.font--wide a:hover::after { 
+    @include background-shade(var(--col-page-light)); 
+    top:  calc(var(--base) * -1);
+    height: calc(100% + calc(var(--base) * 1.75));
+}
+
+.font--wide header { padding-top: calc(var(--base) / 2); }
+
+.font--wide header + p {
+    @include font-size(72);
+    line-height: 1.2;
+}
+
+
+
+@media screen and ( min-width: 48em ) {
+
+    .font--wide a {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: var(--base);
+        position: relative;
+        justify-content: center;
+    }
+    
+    .font--wide header { padding-top: 0; }
+    .font--wide header + p { @include font-size(160); }
+}
+
+
+/* Free fonts
+ * ------------------------------------------------------------- */
+
+.font--narrow { padding: calc(var(--base) / 2) 0; }
+
+.font--narrow a:hover::after { 
+    @include background-shade(var(--col-page-light)); 
+    
+    top: calc(var(--base) / 2 * -1);
+    left: calc(var(--base) / 2 * -1);
+    right: 0;
+    width: auto;
+    height: calc(100% + calc(var(--base) * 1));
+    margin: 0;
+}
+
+@media screen and ( min-width: 48em ) {
+
+    .free-fonts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: var(--base);
+    }
+    
+    .free-fonts header {
+        grid-column: 1 / 2;
+        grid-row: 1 / -99;
+    }
+    
+    .font--narrow { padding-bottom: var(--base); }
+    .font--narrow:nth-of-type(-n+2) { margin-top: var(--base); }
+    
+}
+
+
+/* Stripe between
+ * ------------------------------------------------------------- */
+
+@media screen and ( max-width: 47.99em ) {
+
+    .font--wide,
+    .font--narrow {
+        border-bottom: 1px dashed var(--col-border);
+    }
+}
+
+

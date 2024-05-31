@@ -1,0 +1,36 @@
+/* .site__footer
+ * ------------------------------------------------------------- */
+
+.site__footer { padding: var(--base) 0; }
+.site__footer > * { color: var(--col-text-reverse); }
+
+.site__footer h3 {
+    @include font-size(18);
+    font-weight: 800;
+    padding-bottom: var(--base);
+}
+
+
+.site__footer article { margin-bottom: var(--base); }
+
+
+
+@media screen and ( min-width: 48em ) {
+
+    .site__footer article { padding-right: 50%; }
+}
+
+.jokedewinter {    
+    display: flex;
+    justify-content: flex-end;
+    padding: var(--base) 0 0 0;
+    
+	a {
+		width: 75px;
+		height: 30px;
+		text-indent: -999em;
+		display: block;
+		background: url('../images/jokedewinter.svg');
+		border-bottom: none;
+	}
+}

@@ -16,14 +16,36 @@ body {
     background-color: var(--col-page);
 	color: var(--col-text);
 
-    width: 90%;
-	max-width: 80em; /* 1280px */
+    width: 80%;
+	max-width: 75em; /* 1200px */
 	margin: 0 auto;
     overflow-x: hidden;
 }
 
 body > * { position: relative; }
 
+.site__header { padding: var(--base) 0; }
+.site__hero { padding: var(--base) 0; }
 
+
+.site__main > * {
+    position: relative;
+	padding: var(--base) 0;
+}
+
+
+
+/* Background colours
+ * ------------------------------------------------------------- */
+
+.bg > * {
+    position: relative;
+    z-index: 100;
+}
+
+.bg__light::after { @include background-shade(var(--col-page-light)); }
+.bg__purple::after { @include background-shade(var(--col-purple)); }
+.bg__red::after { @include background-shade(var(--col-red)); }
+.bg__dark::after { @include background-shade(var(--col-page-dark)); }
 
 

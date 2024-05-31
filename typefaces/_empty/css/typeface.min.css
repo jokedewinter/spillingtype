@@ -1,1 +1,0 @@
-@font-face{font-family:"Apium";font-style:normal;font-weight:300;src:local(""),url(../fonts/Apium-Light.woff)format("woff")}:root{--apium:'Apium', serif}.apium,.string.apium-italic{font-family:var(--apium)}.string.apium-italic{font-style:italic}.font__menu h1{font-weight:900}

@@ -3,12 +3,19 @@
  * Images & media elements
  * ------------------------------------------------------------- */
 
-img,
-video {
+img {
 	max-width: 100%; /* Adhere to container width. */
 	height: auto; /* Make sure images are scaled correctly. */
 	display: block;
 }
+
+.image { 
+    max-width: 90em;
+    margin: 0 auto var(--base) auto;
+    padding: 0; 
+}
+
+figcaption { padding: var(--base) 0; }
 
 .svg__icon {
 	width: 32px;
@@ -21,31 +28,4 @@ video {
     margin-top: -0.3em;
 }
 
-
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object { max-width: 100%; }
-
-.video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; // 16/9 ratio
-    //padding-bottom: 75%; // 4/3 ratio
-    //padding-bottom: 66%; // 3/2 ratio
-    overflow: hidden;
-    margin-bottom: var(--base);
-}
-
-
-iframe {
-	position: absolute;
-	top: 0;
-    left: 0;
-	width: 100%;
-	height: 100%;
-    border: none;
-}
 

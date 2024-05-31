@@ -1,0 +1,28 @@
+/*
+ * Utility classes
+ * ------------------------------------------------------------- */
+
+.blue { fill: var(--apium-blue); }
+.grey { fill: var(--apium-grey); }
+.purple { fill: var(--apium-purple); }
+.red { fill: var(--apium-red); }
+
+
+
+/*
+ * Try section
+ * ------------------------------------------------------------- */
+
+.try--apium .try__options { grid-template-columns: repeat(5, 1fr); }
+.try--apium.reverse::after { @include background-shade(var(--apium-red)); }
+
+
+@media screen and ( max-width: 47.99em ) { 
+
+    .try--apium .try__options {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 1em;
+    }
+}
+
+
