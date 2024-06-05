@@ -1,0 +1,95 @@
+<!-- $title = Adding diacritics in Glyphs -->
+<!-- $description = A little guide. -->
+<!-- $class = guide -->
+<!-- $canon = diacritics -->
+<!-- @include "_header.kit" -->
+
+
+
+        
+<main id="main" class="site__main" role="main">
+
+    <article class="">
+		<h1>Adding diacritics in Glyphs</h1>
+		
+		<nav class="page__navigation" role="navigation" aria-label="On page navigation">
+			<ol class="nav__menu">
+				<li><a href="#one">The i and the j</a></li>
+				<li><a href="#two">Add anchors to your letters</a></li>
+				<li><a href="#three">Create the diacritic marks</a></li>
+				<li><a href="#four">Add anchors to your diacritic</a></li>
+				<li><a href="#five">Create the diacritic letters</a></li>
+				<li><a href="#six">Stylistic alternates</a></li>
+				<li><a href="#seven">Uppercase diacritics</a></li>
+				<li><a href="#eight">Fine-tune where necessary</a></li>
+			</ol>
+		</nav><!-- .page__navigation -->
+		
+		<p>To add letters with diacritics to your font you can either do it manually and create all the glyphs, add the base letter and then add the diacritic mark. But that's time consuming and not very efficient.</p>
+		<p>Another way is to break it down in components: the letter and the mark. That way you draw all the components once, and then use everywhere.</p>
+		<p>To match up the letter and the mark you need to tell each one where the connection needs to be made. A bit like when you put together flat pack furniture from Ikea. You have two planks, each with a hole, and a plug to attach both of them together. In Glyphs the holes are anchors, and the plug is the magic behind the scenes. And you are not left behind with a draw full of Allen keys from years and years of putting together Ikea furniture. </p>
+		<p>So how do you do it?</p>
+    </article>
+    
+    <article id="one" class="">
+		<h2>01. The i and the j</h2>
+		<p>Good news, you should already have two letters with a diacritic mark. The lowercase i and j. The dots on those are diacritics. And before you can continue you will need to pull them apart. Both i and j have several diacritic combinations and Glyphs needs to have both parts separately to be able to do so.</p>
+		<p>Open both letters. In the i select the dot and then ctrl click. From the contextual menu choose <b>Component from Selection</b>. Glyphs knows you're in the lowercase i and that you have selected something above the x-height and it will suggest to call that component <i>dotaccentcomb</i>. Take it, it's genius. Do the same for the stem of the i, and again Glyphs knows you're in the i and that you've selected something in the x-height area and it will suggest to call that component <i>idotless</i>. Take that as well. In your lowercase j do the same for the shape of the j. It will end up being called <i>jdotless</i>. In your j delete the dot. We'll put it back later.  </p>
+    </article>
+
+    <article id="two" class="">
+		<h2>02. Add anchors to your letters</h2>
+		<p>Next add anchors to all your letter glyphs. You can do this quickly by selecting all your glyphs and then you go to <b>Glyph > Set Anchors</b>. If you look at your letters now you'll see little red dots. The main ones you will see are <i>top</i>, <i>bottom</i> and <i>ogonek</i>. Glyphs will make a guess where these need to go. In most cases it's pretty close, but you will probably need to adjust their positions later on. Especially the ogonek, it never puts that where it needs to be. But that's for later. </p>
+    </article>
+
+    <article id="three" class="">
+		<h2>03. Create the diacritic marks</h2>
+		<p>The next thing is to make some diacritic marks. Because the aim is to combine a letter with a mark, the name of all diacritic glyphs end with <i>comb</i>. You can add them to your font from the sidebar and select <b>Languages > Latin > Western European</b>. Right at the bottom of the list of characters you'll see the comb marks. Select them all and you should end up with eight new glyphs. Other language regions will have other diacritic marks specific to them. For example the Hungarian umlaut, the carom, the carom.alt and the ogonek are in the Central European group. Add those as well. </p>
+
+		<h3>Position of the mark inside the glyph box</h3>
+		<p>Once you have added the diacritic glyphs, you will need to draw the shapes. Diacritics that sit above letters are drawn between the x-height and the ascender height. Diacritics that sit below letters are drawn below the x-height.  </p>
+
+		<h3>To space or not to space</h3>
+		<p>Diacritics don't need spacing - the position is determined by the anchor - so it's up to you how much space you leave on either side of the shapes. I tend to have the side bearings set to zero, but a bit of breathing space either side wouldn't be a bad idea I guess. </p>
+    </article>
+    
+    <article id="four" class="">
+		<h2>04. Add anchors to your diacritic</h2>
+		<p>When you're done add anchors to all of them as well. You can do this either mark by mark or in bulk. Same way as before <b>Glyph > Set Anchors</b>.</p>
+		<p>You'll see two red dots now, except the ogonek which only has one. Very confusingly they both have the same name, but one starts with and underscore and one doesn't. The one with the underscore is the one that will match up with the anchor in your letter. The one without is the anchor for letters with double decker diacritics. Vietnamese has quite a few of those. And where that anchor is positioned is where it will connect the second diacritic to.  </p>
+
+		<h3>Position of the anchors</h3> 
+		<p>Glyphs will decide where to put the anchors, and mostly it will be fine, but you can fix it later if it's not ok. </p>
+		<p>The <i>_top</i> anchor for diacritics above letters will sit on the x-height line. The <i>_bottom</i> anchor for diacritics below letters will sit on the baseline. For the ogonek I tend to put the <i>_ogonek</i> anchor at the extreme right point of the shape on the baseline. </p>
+    </article>
+
+    <article id="five" class="">
+		<h2>05. Create the diacritic letters</h2>
+		<p>Now you're ready for the magic to happen. Go to Languages > Latin > Western European and select all the glyphs with a diacritic. You can add both the lowercase and uppercase at the same time, but I would advise to start with the lowercase ones first. Select them, click generate and just like that you're done.</p>
+		<p>All these new glyphs are made up of components. Glyphs will combine the base letter with the diacritic mark and use the anchors for positioning. Usually it looks pretty good, but you might want to fine-tune the exact position of the anchors.</p>
+		<p>First of all the ogonek. Open the ogonek glyph, and then control click and choose "Show all glyphs that use this component". And you'll see letters with ogoneks - likely in the wrong place. For each glyph double click the letter component and it will open the base glyph right next to it. And then reposition the anchor for the ogonek to sit where it should be. </p>
+		<p>The dcaron, lcaron and tcaron will need the anchor moving too. This mark uses the anchor called <i>topright</i>. Adjust the position for these in the base letter. </p>
+		<p>Now give the lowercase j its dot back. Either select it in font view or open the letter. Then go to <b>Glyph > Create Composite</b>. And voila, fixed.  </p>
+    </article>
+
+    <article id="six" class="">
+		<h2>06. Stylistic alternates</h2>
+		<p>If you have stylistic alternates that can take diacritics then you will need to create them for the alternates as well. You can do this in bulk.</p>
+		<p>Select all the glyphs with diacritics from your main set that you have a stylistic alternate for. For example if you have an alternate a, select aacute, acircumflex, aadieresis, etc. Then duplicate them by using command+d. All the duplicated glyphs will have the same name with a 001 extension. Keep all these duplicates selected and then go to <b>Edit > Find > Find and Replace</b>. In the dialog window replace <i>001</i> with the stylistic alternate name you need. For example <i>ss01</i>. This will change all the glyph names to match the stylistic set. </p>
+		<p>Now you need to change the base letter to match the stylistic alternate one. Select all the new ones and go to <b>Glyph > Create Composite</b> and it will swap the original letter with the alternate. </p>
+    </article>
+	
+    <article id="seven" class="">
+		<h2>07. Uppercase diacritics</h2>
+		<p>The process for the uppercase diacritics is exactly the same. Except depending on the design of your font you may be better of using an adjusted set just for the uppercase. Diacritics on uppercase letters are usually a little flatter because they will likely end up above the "bounding" box of the glyph.</p>
+		<p>To make these select all your diacritics, duplicate them and then change their name to have .case as the extension. Adjust the shapes and then add all the uppercase glyphs with diacritics.  </p>
+    </article>
+	
+    <article id="eight" class="">
+		<h2>08. Fine-tune where necessary</h2>
+		<p>The position of most of the diacritics will be fine, but it's worth going through them all and making sure. Unless a specific mark is always in the wrong place, I would reposition the anchors in the letter glyphs rather than the diacritic glyphs. </p>
+		<p>If you are in a letter you can click on one of the anchors and a grey outline will appear where the marks for that anchor will go. This is helpful when you are moving the anchors. If you do this in a diacritic glyph you can see where a double decker mark will go. I am not familiar with Vietnamese, but from what I have seen they are much closer to each other than Glyphs puts the anchors for them. So you can use the grey outline to position them better. Even if you're not adding Vietnamese characters to your font it's worth taking some time to position these. You never know, maybe one day you will, and then you'll be pretty chuffed with your past self to have thought ahead.  </p>
+    </article>
+</main>
+
+<!-- @include "_footer.kit" -->
