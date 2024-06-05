@@ -5,7 +5,6 @@
 <!-- $h1 = apium -->
 <!-- $buy = nil -->
 <!-- $specimen = specimen/..pdf -->
-
 <!-- @include "../_local/_header.kit" -->
 
 <main class="site__font">
@@ -23,6 +22,12 @@
 	<!-- @include "_modules/_specimen.kit" -->
 	<!-- @include "_modules/_try.kit" -->
 	
+	<div class="font__glyphs bg">
+		
+		<!-- @include "_modules/_glyphs.kit" -->
+	
+	</div>
+
 	<div id="specifications" class="font__details bg">
 	
 		<!-- @include "_modules/_features.kit" -->
@@ -33,5 +38,30 @@
 </main>
 
 <script src="<!-- $path -->assets/js/jdw-typetester.js"></script>
+<script src="<!-- $path -->assets/js/jdw-glyph-viewer.js"></script>
+
+<script>
+// Kick off the fun
+fetch_json();
+// Fetches the json file and sets up the event listener
+function fetch_json() {
+
+	let response_promise = fetch("./json/apium.json");
+	document.addEventListener("DOMContentLoaded", function() {
+		response_promise
+			.then(response => response.json()
+			.then(data => {
+				create_glyph_grid(data);
+				document.querySelectorAll(".glyphs a").forEach(function(anchor) {
+					anchor.addEventListener("mouseover", showGlyph);
+					anchor.addEventListener("mouseclick", showGlyph);
+				});	
+		}))
+	}, false)
+
+}
+</script>
+
 <!-- @include "../../_root/_footer.kit" -->
+
 

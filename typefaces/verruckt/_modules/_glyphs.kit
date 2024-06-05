@@ -1,71 +1,32 @@
 <section class="module__glyphs">
-
-	<figure class="glyph_box">
-		<!--
-		On page load display the first glyph.
-		After that, the thumbnail buttons do the work on hover.
-		-->
-		<div id="glyph" class="verruckt-display regular">A</div>
+	
+	<figure class="glyph">
+		<div id="glyph" class="verruckt-display">A</div>
 	</figure>
-		
+			
 	<section class="glyphs">
-		<h2>Glyphset</h2>
-		<h3 class="feature">Uppercase</h2>
-		<a class="verruckt-display regular" href="#" 	data-glyph="A">A</a> <a href="#" data-glyph="A">A</a> <a href="#" data-glyph="Á">Á</a>
-		<a href="#" 	data-glyph="Ă">Ă</a> <a href="#" data-glyph="Â">Â</a> <a href="#" data-glyph="Ä">Ä</a>
-		<a href="#" 	data-glyph="À">À</a> <a href="#" data-glyph="Ā">Ā</a> <a href="#" data-glyph="Ą">Ą</a>
-		<a href="#" 	data-glyph="Å">Å</a> <a href="#" data-glyph="Ã">Ã</a> <a href="#" data-glyph="Æ">Æ</a>
-		<a href="#" 	data-glyph="B">B</a> <a href="#" data-glyph="C">C</a> <a href="#" data-glyph="Ć">Ć</a>
-		<a href="#" 	data-glyph="Č">Č</a> <a href="#" data-glyph="Ç">Ç</a> <a href="#" data-glyph="Ċ">Ċ</a>
-		<a href="#" 	data-glyph="D">D</a> <a href="#" data-glyph="Ð">Ð</a> <a href="#" data-glyph="Ď">Ď</a>
-		<a href="#" 	data-glyph="Đ">Đ</a> <a href="#" data-glyph="E">E</a> <a href="#" data-glyph="É">É</a>
-		<a href="#" 	data-glyph="Ě">Ě</a> <a href="#" data-glyph="Ê">Ê</a> <a href="#" data-glyph="Ë">Ë</a>
-		<a href="#" 	data-glyph="Ė">Ė</a> <a href="#" data-glyph="È">È</a> <a href="#" data-glyph="Ē">Ē</a>
-		<a href="#" 	data-glyph="Ę">Ę</a> <a href="#" data-glyph="F">F</a> <a href="#" data-glyph="G">G</a> 
-		<a href="#" 	data-glyph="Ğ">Ğ</a> <a href="#" data-glyph="Ģ">Ģ</a> <a href="#" data-glyph="Ġ">Ġ</a>
-		<a href="#" 	data-glyph="H">H</a> <a href="#" data-glyph="Ħ">Ħ</a> <a href="#" data-glyph="I">I</a>
-		<a href="#" 	data-glyph="Í">Í</a> <a href="#" data-glyph="Î">Î</a> <a href="#" data-glyph="Ï">Ï</a>
-		<a href="#" 	data-glyph="İ">İ</a> <a href="#" data-glyph="Ì">Ì</a> <a href="#" data-glyph="Ī">Ī</a>
-		<a href="#" 	data-glyph="Į">Į</a> <a href="#" data-glyph="J">J</a> <a href="#" data-glyph="K">K</a>
-		<a href="#" 	data-glyph="Ķ">Ķ</a> <a href="#" data-glyph="L">L</a> <a href="#" data-glyph="Ĺ">Ĺ</a>
-		<a href="#" 	data-glyph="Ľ">Ľ</a> <a href="#" data-glyph="Ļ">Ļ</a> <a href="#" data-glyph="Ł">Ł</a>
-		<a href="#" 	data-glyph="M">M</a> <a href="#" data-glyph="N">N</a> <a href="#" data-glyph="Ń">Ń</a>
-		<a href="#" 	data-glyph="Ň">Ň</a> <a href="#" data-glyph="Ņ">Ņ</a> <a href="#" data-glyph="Ŋ">Ŋ</a>
-		<a href="#" 	data-glyph="Ñ">Ñ</a> <a href="#" data-glyph="O">O</a> <a href="#" data-glyph="Ó">Ó</a>
-		<a href="#" 	data-glyph="Ô">Ô</a> <a href="#" data-glyph="Ö">Ö</a> <a href="#" data-glyph="Ò">Ò</a>
-		<a href="#" 	data-glyph="Ő">Ő</a> <a href="#" data-glyph="Ō">Ō</a> <a href="#" data-glyph="Ø">Ø</a>
-		<a href="#" 	data-glyph="Õ">Õ</a> <a href="#" data-glyph="Œ">Œ</a> <a href="#" data-glyph="P">P</a>
-		<a href="#" 	data-glyph="Þ">Þ</a> <a href="#" data-glyph="Q">Q</a> <a href="#" data-glyph="R">R</a>
-		<a href="#" 	data-glyph="Ŕ">Ŕ</a> <a href="#" data-glyph="Ř">Ř</a> <a href="#" data-glyph="Ŗ">Ŗ</a>
-		<a href="#" 	data-glyph="S">S</a> <a href="#" data-glyph="Ś">Ś</a> <a href="#" data-glyph="Š">Š</a>
-		<a href="#" 	data-glyph="Ş">Ş</a> <a href="#" data-glyph="Ș">Ș</a> <a href="#" data-glyph="ẞ">ẞ</a>
-		<a href="#" 	data-glyph="T">T</a> <a href="#" data-glyph="Ŧ">Ŧ</a> <a href="#" data-glyph="Ť">Ť</a>
-		<a href="#" 	data-glyph="Ţ">Ţ</a> <a href="#" data-glyph="Ț">Ț</a> <a href="#" data-glyph="U">U</a>
-		<a href="#" 	data-glyph="Ú">Ú</a> <a href="#" data-glyph="Û">Û</a> <a href="#" data-glyph="Ü">Ü</a>
-		<a href="#" 	data-glyph="Ù">Ù</a> <a href="#" data-glyph="Ű">Ű</a> <a href="#" data-glyph="Ū">Ū</a>
-		<a href="#" 	data-glyph="Ų">Ų</a> <a href="#" data-glyph="Ů">Ů</a> <a href="#" data-glyph="V">V</a>
-		<a href="#" 	data-glyph="W">W</a> <a href="#" data-glyph="Ẃ">Ẃ</a> <a href="#" data-glyph="Ŵ">Ŵ</a>
-		<a href="#" 	data-glyph="Ẅ">Ẅ</a> <a href="#" data-glyph="Ẁ">Ẁ</a> <a href="#" data-glyph="X">X</a>
-		<a href="#" 	data-glyph="Y">Y</a> <a href="#" data-glyph="Ý">Ý</a> <a href="#" data-glyph="Ŷ">Ŷ</a>
-		<a href="#" 	data-glyph="Ÿ">Ÿ</a> <a href="#" data-glyph="Ỳ">Ỳ</a> <a href="#" data-glyph="Z">Z</a>
-		<a href="#" 	data-glyph="Ź">Ź</a> <a href="#" data-glyph="Ž">Ž</a> <a href="#" data-glyph="Ż">Ż</a>	
-		<h3 class="feature">Lowercase</h3>
-		<p>aáăâäàāąåãæbcćčçċdðďđeéěêëėèēęfgğģġ</p>
-		<p>hħiıíîïìīįjȷkķlĺľļłmnńňņŋñoóôöòőōøõœ</p>
-		<p>pþqrŕřŗsśšşșßtŧťţțuúûüùűūųůvwẃŵẅẁxyýŷÿỳzźžż</p>
-		<h3 class="feature">Small Caps</h3>
-		<h3 class="feature">Punctuation &amp; Symbols</h3>
-		<p>.,:;…!¡?¿·•*#/\(){}[]-–—_‚„“”‘’«»‹›"'@&amp;</p>
-		<p>+−×÷=≠><≥≤±≈~¬^∅∞∫∏∑√∂%‰</p>
-		<h3 class="feature">Figures (default)</h3><p>0123456789</p>
-		<h3 class="feature">Other figures</h3>
-		<h3 class="feature">Currency</h3><p>¢¤$€£¥</p>
-		<h3 class="feature">Superscript</h3><p>⁰¹²³⁴⁵⁶⁷⁸⁹</p>
-		<h3 class="feature">Subscript</h3><p>₀₁₂₃₄₅₆₇₈₉</p>
-		<h3 class="feature">Fractions</h3><p>½¼¾⅛⅜⅝⅞</p>
-		<h3 class="feature">Additional symbols</h3><p>↑↗→↘↓↙←↖↔↕◊¶§©®™°|¦†‡</p>
-		<h3 class="feature">Ligatures</h3>
-		<h3 class="feature">Alternates</h3>
-	</section>
-
+		
+		<header>
+			<h2>Glyphset</h2>
+            <select id="selectFont"onchange="chooseFont()">
+                <option value="300">Display Light</option>
+                <option value="400" selected>Display Regular</option>
+                <option value="500">Display Medium</option>
+                <option value="700">Display Bold</option>
+                <option value="900">Display Black</option>
+				<!--
+                <option value="300">Text Light</option>
+                <option value="400">Text Regular</option>
+                <option value="500">Text Medium</option>
+                <option value="700">Text Bold</option>
+                <option value="900">Text Black</option>
+                -->
+            </select>
+        </header>
+		
+		<div id="glyphs" class="vscrolling verruckt-display">
+		</div>
+		
+	</section>	
+	
 </section>

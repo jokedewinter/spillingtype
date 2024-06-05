@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -336,6 +335,37 @@
 					
 					
 	
+	<div class="font__glyphs bg">
+		
+		<section class="module__glyphs">
+			
+			<figure class="glyph">
+				<div id="glyph" class="bloody-pandora">A</div>
+			</figure>
+					
+			<section class="glyphs">
+				
+				<header>
+					<h2>Glyphset</h2>
+		            <select id="selectFont" onchange="chooseFont()">
+		                <option value="300">Light</option>
+		                <option value="400" selected>Regular</option>
+		                <option value="500">Medium</option>
+		                <option value="700">Bold</option>
+		                <option value="900">Black</option>
+		            </select>
+		        </header>
+				
+				<div id="glyphs" class="vscrolling bloody-pandora">
+				</div>
+				
+			</section>	
+			
+		</section>
+		
+	
+	</div>
+
 	<div id="specifications" class="font__details bg">
 	
 		<section class="module__features">
@@ -484,6 +514,30 @@
 </main>
 
 <script src="../../assets/js/jdw-typetester.js"></script>
+<script src="../../assets/js/jdw-glyph-viewer.js"></script>
+
+<script>
+// Kick off the fun
+fetch_json();
+// Fetches the json file and sets up the event listener
+function fetch_json() {
+
+	let response_promise = fetch("./json/bloody-pandora.json");
+	document.addEventListener("DOMContentLoaded", function() {
+		response_promise
+			.then(response => response.json()
+			.then(data => {
+				create_glyph_grid(data);
+				document.querySelectorAll(".glyphs a").forEach(function(anchor) {
+					anchor.addEventListener("mouseover", showGlyph);
+					anchor.addEventListener("mouseclick", showGlyph);
+				});	
+		}))
+	}, false)
+
+}
+</script>
+
 
 <footer class="site__footer">
 	
@@ -545,6 +599,7 @@ function mail(){window.location.href = adress;}
 
 </body>
 </html>
+
 
 
 

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,64 +92,97 @@
 			
 			</section>
 			
+	
+	<figure class="video">
+		<iframe title="vimeo-player" src="" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+	</figure>
+	
 	<section class="module__specimen">
-				
-					<article class="text--wide">
-						<h3 class="feature">Black</h3>
-						<p class="_typeface black center size-72" contenteditable="true" spellcheck="false">..</p>
-					</article>
-				
-					<article class="text--narrow">
-						<h3 class="feature">Bold + Regular 18pt/1.5 <br>in Dutch</h3>
-						<p class="_typeface bold" contenteditable="true" spellcheck="false"><strong>..</strong></p>
-						<p class="_typeface regular" contenteditable="true" spellcheck="false">..</p>
-					</article>
+	
+		<article class="text--wide">
+			<h3 class="feature">Black</h3>
+			<p class="_typeface black center size-72" contenteditable="true" spellcheck="false">..</p>
+		</article>
+	
+		<article class="text--narrow">
+			<h3 class="feature">Bold + Regular 18pt/1.5 <br>in Dutch</h3>
+			<p class="_typeface bold" contenteditable="true" spellcheck="false"><strong>..</strong></p>
+			<p class="_typeface regular" contenteditable="true" spellcheck="false">..</p>
+		</article>
+	        
+	</section>
+	
+	<section id="try" class="module__try">
+			
+			
+			  
+			  
+			<section class="try">
+					<div class="try__options">
+						<h3 class="feature">Light</h3>
+						
+						<div class="fontSize">
+							<label for="-size">Size <span class="sizeValue">125 px</span>
+								<input id="-size" class="selectSize" type="range" class="" min="32" max="150" value="100"> 
+							</label>
+						</div>
+						                        
+						<div class="selectAlignment">
+							<button class="alignment active" name="left">
+								<span class="screen-reader-text">Left</span>
+								<img src="../../assets/images/align-left.svg" alt="Align text left.">
+							</button>
+							<button class="alignment" name="center">
+								<span class="screen-reader-text">Center</span>
+								<img src="../../assets/images/align-center.svg" alt="Center text.">
+							</button>
+							<button class="alignment" name="right">
+								<span class="screen-reader-text">Right</span>
+								<img src="../../assets/images/align-right.svg" alt="Align text right.">
+							</button>
+						</div>
+					</div>
 				        
+					<div class="try__text">
+				        <p class="string " style="font-weight: 100;" contenteditable="true">..</p>
+				    </div>
+					
 				</section>
 				
-	<section id="try" class="module__try">
-						
-						
-						  
-						  
-						<section class="try">
-								<div class="try__options">
-									<h3 class="feature">Light</h3>
-									
-									<div class="fontSize">
-										<label for="-size">Size <span class="sizeValue">125 px</span>
-											<input id="-size" class="selectSize" type="range" class="" min="32" max="150" value="100"> 
-										</label>
-									</div>
-									                        
-									<div class="selectAlignment">
-										<button class="alignment active" name="left">
-											<span class="screen-reader-text">Left</span>
-											<img src="../../assets/images/align-left.svg" alt="Align text left.">
-										</button>
-										<button class="alignment" name="center">
-											<span class="screen-reader-text">Center</span>
-											<img src="../../assets/images/align-center.svg" alt="Center text.">
-										</button>
-										<button class="alignment" name="right">
-											<span class="screen-reader-text">Right</span>
-											<img src="../../assets/images/align-right.svg" alt="Align text right.">
-										</button>
-									</div>
-								</div>
-							        
-								<div class="try__text">
-							        <p class="string " style="font-weight: 100;" contenteditable="true">..</p>
-							    </div>
-								
-							</section>
-							
-								
 					
-					</section>	
-					
-					
+		
+		</section>	
+		
+		
 	
+	<div class="font__glyphs bg">
+		
+		<section class="module__glyphs">
+			
+			<figure class="glyph">
+				<div id="glyph">A</div>
+			</figure>
+					
+			<section class="glyphs">
+				
+				<header>
+					<h2>Glyphset</h2>
+		            <select id="selectFont" onchange="chooseFont()">
+		                <option value="400" selected>Regular</option>
+		                <option value="900">Black</option>
+		            </select>
+		        </header>
+				
+				<div id="glyphs" class="vscrolling">
+				</div>
+				
+			</section>	
+			
+		</section>
+		
+	
+	</div>
+
 	<div id="specifications" class="font__details bg">
 	
 		<section class="module__features">
@@ -202,6 +234,30 @@
 </main>
 
 <script src="../../assets/js/jdw-typetester.js"></script>
+<script src="../../assets/js/jdw-glyph-viewer.js"></script>
+
+<script>
+// Kick off the fun
+fetch_json();
+// Fetches the json file and sets up the event listener
+function fetch_json() {
+
+	let response_promise = fetch("./json/glyphs.json");
+	document.addEventListener("DOMContentLoaded", function() {
+		response_promise
+			.then(response => response.json()
+			.then(data => {
+				create_glyph_grid(data);
+				document.querySelectorAll(".glyphs a").forEach(function(anchor) {
+					anchor.addEventListener("mouseover", showGlyph);
+					anchor.addEventListener("mouseclick", showGlyph);
+				});	
+		}))
+	}, false)
+
+}
+</script>
+
 
 <footer class="site__footer">
 	

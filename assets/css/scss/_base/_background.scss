@@ -1,7 +1,7 @@
 /**
- * -------------------------------------------------------------
+ * ---------------------------------
  * Background 
- * ------------------------------------------------------------- */
+ * --------------------------------- */
 
 .bg,
 .bg-hover {
@@ -31,18 +31,17 @@
 .site__masthead.bg::after { background-color: var(--col-letter); }
 .font__menu.bg::after { background-color: var(--col-page); }
 
+.font__glyphs.bg::after { background-color: var(--col-text); }
+.font__glyphs.bg > * { color: var(--col-text-reverse); }
+
 
 /* Hover backgrounds
  * Teaser, Fonts, Extract
  * Typeface colours are set in the _teaser/typeface scss files
  * ------------------------------------------------------------- */
 
-.extract.bg-hover:hover {
-	 background-color: var(--col-letter);
-}
-.typeface.bg-hover:hover a {
-	display: block;
-}
+.extract.bg-hover:hover { background-color: var(--col-letter); }
+.typeface.bg-hover:hover a { display: block; }
 
 .teaser.bg-hover:hover,
 .typeface.bg-hover:hover { color: var(--col-text-hover); }
