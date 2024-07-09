@@ -1,15 +1,25 @@
 @font-face {
-  font-family: 'Average';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),
-       url('../fonts/average/Average-240327-059-Regular.woff') format('woff'); 
+	font-family: 'Average'; font-style: normal; font-weight: 300;
+	src: local(''), url('../fonts/average/Average-063-240709-Light.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Average';
-  font-style: normal;
-  font-weight: 700;
-  src: local(''),
-       url('../fonts/average/Average-240327-059-Bold.woff') format('woff'); 
+	font-family: 'Average'; font-style: normal; font-weight: 400;
+	src: local(''), url('../fonts/average/Average-063-240709-Regular.woff') format('woff');
 }
+
+@font-face {
+	font-family: 'Average'; font-style: normal; font-weight: 500;
+	src: local(''), url('../fonts/average/Average-063-240709-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Average'; font-style: normal; font-weight: 700;
+	src: local(''), url('../fonts/average/Average-063-240709-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Average'; font-style: normal; font-weight: 900;
+	src: local(''), url('../fonts/average/Average-063-240709-Black.woff') format('woff');
+}
+
