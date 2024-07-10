@@ -20,6 +20,7 @@
 .footer__social ul {
 	display: flex;
 }
+
 .jokedewinter {    
     display: flex;
     justify-content: flex-end;
@@ -34,6 +35,22 @@
 	background: url('../images/jokedewinter.svg');
 	border-bottom: none;
 }
+
+
+
+/* Social media svg colours
+ * --------------------------------- */
+
+#instagram g,
+#mastodon path,
+.home #mastodon path + path { fill: var(--col-page-reverse); }
+
+
+.home #instagram g,
+.home #mastodon path,
+#mastodon path + path { fill: var(--col-page); }
+
+
 
 /* Wider viewport
  * --------------------------------- */

@@ -38,7 +38,7 @@ Version: 2024/2.0
  * Site
  * --------------------------------- */
 
-@import "_site/_masthead";
+@import "_site/_header";
 @import "_site/_footer";
 @import "_site/_font";
 
@@ -82,8 +82,9 @@ Version: 2024/2.0
  * Pages
  * --------------------------------- */
 
-@import "_pages/_page";
 @import "_pages/_fonts";
+@import "_pages/_home";
+@import "_pages/_page";
 @import "_pages/_post";
 
 

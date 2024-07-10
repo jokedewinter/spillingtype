@@ -44,6 +44,14 @@ a:hover,
 }
 
 
+/* Exceptions 
+ * --------------------------------- */
+ 
+.extract a:hover h2,
+.extract a:hover p:not(.link) {
+	color: var(--col-text);
+}
+
 /* Wider viewport
  * --------------------------------- */
 

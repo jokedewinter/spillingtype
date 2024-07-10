@@ -28,7 +28,7 @@
 }
 
 .bg::after { background-color: var(--col-page-features); }
-.site__masthead.bg::after { background-color: var(--col-letter); }
+.site__header.bg::after { background-color: var(--col-border); }
 .font__menu.bg::after { background-color: var(--col-page); }
 
 .font__glyphs.bg::after { background-color: var(--col-text); }
@@ -40,12 +40,9 @@
  * Typeface colours are set in the _teaser/typeface scss files
  * ------------------------------------------------------------- */
 
-.extract.bg-hover:hover { background-color: var(--col-letter); }
-.typeface.bg-hover:hover a { display: block; }
+.extract.bg-hover:hover { background-color: var(--col-border); }
 
-.teaser.bg-hover:hover,
 .typeface.bg-hover:hover { color: var(--col-text-hover); }
-
-.teaser.bg-hover:hover::after,
+.typeface.bg-hover:hover a { display: block; }
 .typeface.bg-hover:hover::after { background-color: var(--col-hover); }
 
